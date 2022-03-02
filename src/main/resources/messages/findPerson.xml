@@ -181,6 +181,42 @@
                     <semanticsText>LivingSubject.kemriKisumuHdssIdentifier</semanticsText>
                 </livingSubjectId>
                 <livingSubjectId>
+                    <value root="1.3.6.1.4.1.150.2474.11.1.5.6" extension="1-161-1-3"/>
+                    <semanticsText>LivingSubject.telephoneNo</semanticsText>
+                </livingSubjectId>
+                <livingSubjectId>
+                    <value root="1.3.6.1.4.1.150.2474.11.1.5.7" extension="1-161-1-3"/>
+                    <semanticsText>LivingSubject.nationalId</semanticsText>
+                </livingSubjectId>
+                <livingSubjectId>
+                    <value root="1.3.6.1.4.1.150.2474.11.1.5.8" extension="1-161-1-3"/>
+                    <semanticsText>LivingSubject.nhifNo</semanticsText>
+                </livingSubjectId>
+                <livingSubjectId>
+                    <value root="1.3.6.1.4.1.150.2474.11.1.5.9" extension="1-161-1-3"/>
+                    <semanticsText>LivingSubject.hudumaNo</semanticsText>
+                </livingSubjectId>
+                <livingSubjectId>
+                    <value root="1.3.6.1.4.1.150.2474.11.1.5.10" extension="1-161-1-3"/>
+                    <semanticsText>LivingSubject.passportNo</semanticsText>
+                </livingSubjectId>
+                <livingSubjectId>
+                    <value root="1.3.6.1.4.1.150.2474.11.1.5.11" extension="1-161-1-3"/>
+                    <semanticsText>LivingSubject.birthCertificateNo</semanticsText>
+                </livingSubjectId>
+                <livingSubjectId>
+                    <value root="1.3.6.1.4.1.150.2474.11.1.5.12" extension="1-161-1-3"/>
+                    <semanticsText>LivingSubject.birthNotificationNo</semanticsText>
+                </livingSubjectId>
+                <livingSubjectId>
+                    <value root="1.3.6.1.4.1.150.2474.11.1.5.13" extension="1-161-1-3"/>
+                    <semanticsText>LivingSubject.alientId</semanticsText>
+                </livingSubjectId>
+                <livingSubjectId>
+                    <value root="1.3.6.1.4.1.150.2474.11.1.5.14" extension="1-161-1-3"/>
+                    <semanticsText>LivingSubject.nemisId</semanticsText>
+                </livingSubjectId>
+                <livingSubjectId>
                     <value root="1.3.6.1.4.1.150.2474.11.1.6.1.1" extension="20110105"/>
                     <semanticsText>LivingSubject.lastRegularVisitDate</semanticsText>
                 </livingSubjectId>

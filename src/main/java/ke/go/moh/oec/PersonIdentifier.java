@@ -32,68 +32,92 @@ package ke.go.moh.oec;
  * no identifier. For example, a person when they first visits a clinic
  * may be identified and entered into a person index database, but they may
  * not yet been registered by that clinic and assigned a patient identifier.
- * 
+ *
  * @author Jim Grace
  */
 public class PersonIdentifier {
 
-    public enum Type {
+	public enum Type {
 
-        patientRegistryId,
-        masterPatientRegistryId,
-        cccUniqueId,
-        cccLocalId,
-        kisumuHdssId
-    }
-    /**
-     * The type of person identifier.
-     */
-    private Type identifierType;
-    /**
-     * The value of the person identifier, for example "12345-67890".
-     */
-    private String identifier;
+		patientRegistryId("Patient Registry ID"),
+		masterPatientRegistryId("Master Patient Registry ID"),
+		cccUniqueId("CCC Unique ID"),
+		cccLocalId("CCC Local ID"),
+		kisumuHdssId("Kisumu HDSS ID"),
+		TELEPHONE_NO("Telephone No"),
+		NHIF_NO("NHIF No"),
+		NATIONAL_ID("National ID"),
+		HUDUMA_NO("Huduma No"),
+		PASSPORT_NO("Passport No"),
+		BIRTH_CERTIFICATE_NO("Birth Certificate No"),
+		BIRTH_NOTIFICATION_NO("Birth Notification No"),
+		ALIEN_ID("Alien ID"),
+		NEMIS_ID("NEMIS ID");
 
-    public String getIdentifier() {
-        return identifier;
-    }
+		private String name;
 
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
-    }
+		Type(String name) {
+			this.name = name;
+		}
+	}
 
-    public Type getIdentifierType() {
-        return identifierType;
-    }
+	/**
+	 * The type of person identifier.
+	 */
+	private Type identifierType;
+	/**
+	 * The value of the person identifier, for example "12345-67890".
+	 */
+	private String identifier;
 
-    public void setIdentifierType(Type identifierType) {
-        this.identifierType = identifierType;
+	public PersonIdentifier() {
+	}
 
-    }
+	public PersonIdentifier(Type identifierType, String identifier) {
+		this.identifierType = identifierType;
+		this.identifier = identifier;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final PersonIdentifier other = (PersonIdentifier) obj;
-        if (this.identifierType != other.identifierType) {
-            return false;
-        }
-        if ((this.identifier == null) ? (other.identifier != null) : !this.identifier.equalsIgnoreCase(other.identifier)) {
-            return false;
-        }
-        return true;
-    }
+	public String getIdentifier() {
+		return identifier;
+	}
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + (this.identifierType != null ? this.identifierType.hashCode() : 0);
-        hash = 79 * hash + (this.identifier != null ? this.identifier.hashCode() : 0);
-        return hash;
-    }
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+	}
+
+	public Type getIdentifierType() {
+		return identifierType;
+	}
+
+	public void setIdentifierType(Type identifierType) {
+		this.identifierType = identifierType;
+
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		final PersonIdentifier other = (PersonIdentifier) obj;
+		if (this.identifierType != other.identifierType) {
+			return false;
+		}
+		if ((this.identifier == null) ? (other.identifier != null) : !this.identifier.equalsIgnoreCase(other.identifier)) {
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		int hash = 7;
+		hash = 79 * hash + (this.identifierType != null ? this.identifierType.hashCode() : 0);
+		hash = 79 * hash + (this.identifier != null ? this.identifier.hashCode() : 0);
+		return hash;
+	}
 }
